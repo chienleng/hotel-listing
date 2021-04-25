@@ -6,14 +6,14 @@ import { direction, PRICE_HIGH_LOW } from '../enums/order-by'
 
 Vue.use(Vuex)
 
-const store = new Vuex.Store({
+export const storeModule = {
   state: {
     orderBy: PRICE_HIGH_LOW,
     hotels: []
   },
 
   getters: {
-    listing: state => 
+    listing: state =>
       _orderBy(
         state.hotels,
         ['offer.displayPrice.amount'],
@@ -53,6 +53,8 @@ const store = new Vuex.Store({
       commit('setHotels', hotels)
     }
   }
-})
+}
+
+const store = new Vuex.Store(storeModule)
 
 export default store
