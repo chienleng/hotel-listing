@@ -1,6 +1,6 @@
 <template>
   <div>
-    {{ price }}
+    <strong>{{ price }}</strong>
     {{ priceCurrency }}
     {{ savings }}
     {{ savingsCurrency }}

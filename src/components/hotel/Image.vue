@@ -1,7 +1,7 @@
 <template>
   <div>
     {{ promo }}
-    <img :src="src" :alt="caption" />
+    <!-- <img :src="src" :alt="caption" /> -->
   </div>
 </template>
 

@@ -4,7 +4,7 @@
 
     <div class="row">
       <Summary
-        :count="hotels.length"
+        :count="listing.length"
         :city="'Sydney'"
       />
       <OrderBy
@@ -15,7 +15,7 @@
 
     <ol>
       <li
-        v-for="(hotel) in hotels"
+        v-for="(hotel) in listing"
         :key="hotel.id"
       >
         <HotelItem :hotel="hotel" />
@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import { mapActions, mapMutations, mapState } from 'vuex'
+import { mapActions, mapGetters, mapMutations, mapState } from 'vuex'
 import AppHeader from './components/app/Header.vue'
 import Summary from './components/Summary'
 import OrderBy from './components/OrderBy'
@@ -41,7 +41,8 @@ export default {
   },
 
   computed: {
-    ...mapState(['hotels', 'orderBy'])
+    ...mapGetters(['listing']),
+    ...mapState(['orderBy'])
   },
 
   created() {

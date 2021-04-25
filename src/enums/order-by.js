@@ -5,6 +5,10 @@ const labels = {}
 labels.PRICE_HIGH_LOW = 'Price (high-low)'
 labels.PRICE_LOW_HIGH = 'Price (low-high)'
 
+export const direction = {}
+direction.PRICE_HIGH_LOW = 'desc'
+direction.PRICE_LOW_HIGH = 'asc'
+
 export const orderBySelections = [{
   label: labels[PRICE_HIGH_LOW],
   value: PRICE_HIGH_LOW

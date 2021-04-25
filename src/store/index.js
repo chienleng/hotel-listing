@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import _orderBy from 'lodash.orderby'
 import Hotel from '../models/hotel'
-import { PRICE_HIGH_LOW } from '../enums/order-by'
+import { direction, PRICE_HIGH_LOW } from '../enums/order-by'
 
 Vue.use(Vuex)
 
@@ -11,7 +12,14 @@ const store = new Vuex.Store({
     hotels: []
   },
 
-  getters: {},
+  getters: {
+    listing: state => 
+      _orderBy(
+        state.hotels,
+        ['offer.displayPrice.amount'],
+        [direction[state.orderBy]]
+      )
+  },
 
   mutations: {
     setHotels(state, hotels) {
