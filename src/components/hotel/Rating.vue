@@ -25,7 +25,11 @@ export default {
         return types.indexOf(value) !== -1
       }
     },
-    value: Number
+    value: {
+      validator(value) {
+        return value >= 0 && value <= 5
+      }
+    }
   },
   
   computed: {
