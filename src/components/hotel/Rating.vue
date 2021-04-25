@@ -72,8 +72,8 @@ export default {
   width: 20px;
 }
 .rating-self {
-  width: 18px;
-  margin-right: 2px;
+  width: 15px;
+  margin-right: 3px;
 }
 .rating-half.rating-star {
   position: relative;
