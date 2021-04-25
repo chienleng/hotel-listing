@@ -1,7 +1,7 @@
 import PreviewImage from './preview-image'
 import Rating from './rating'
 
-export class Property {
+export default class Property {
   constructor({ propertyId, title, address, previewImage, rating }) {
     this.propertyId = propertyId
     this.title = title

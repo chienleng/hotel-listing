@@ -1,4 +1,4 @@
-export class PreviewImage {
+export default class PreviewImage {
   constructor({ url, caption, imageType }) {
     this.url = url
     this.caption = caption

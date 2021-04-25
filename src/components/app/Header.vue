@@ -1,5 +1,15 @@
 <template>
   <header>
-    <img alt="Vue logo" src="@/assets/qantas-logo.png">
+    <img alt="Vue logo" src="@/assets/qantas-logo.png"> {{ hotels.length }}
   </header>
-</template> 
+</template>
+
+<script>
+import { mapState } from 'vuex'
+
+export default {
+  computed: {
+    ...mapState(['hotels'])
+  }
+}
+</script>
