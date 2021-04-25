@@ -3,9 +3,9 @@
 
     <h3>{{ title }}</h3>
 
-        <!-- {{ ratingType }}
-    {{ ratingValue }} -->
-
+    <Rating
+      :type="ratingType"
+      :value="ratingValue" />
 
     <div class="address">{{ address }}</div>
 
@@ -16,7 +16,12 @@
 </template>
 
 <script>
+import Rating from './Rating'
+
 export default {
+  components: {
+    Rating
+  },
   props: {
     title: String,
     address: String,
