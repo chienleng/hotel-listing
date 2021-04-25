@@ -1,4 +1,4 @@
-# qantas
+# Hotel Listing
 
 ## Project setup
 ```
@@ -8,6 +8,11 @@ yarn install
 ### Compiles and hot-reloads for development
 ```
 yarn serve
+```
+
+### Run tests
+```
+yarn test:unit
 ```
 
 ### Compiles and minifies for production
