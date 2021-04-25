@@ -1,6 +1,6 @@
 <template>
   <header>
-    <img alt="Vue logo" src="@/assets/qantas-logo.png">
+    <img alt="Qantas logo" src="@/assets/qantas-logo.png">
   </header>
 </template>
 
