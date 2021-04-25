@@ -41,6 +41,7 @@ export default {
 }
 .row {
   padding-top: 0;
+  padding-bottom: 0;
   justify-content: start;
   align-items: center;
   flex-wrap: wrap;
