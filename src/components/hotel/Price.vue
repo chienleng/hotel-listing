@@ -10,7 +10,7 @@
       {{ price }}
     </div>
 
-    <div class="savings">
+    <div v-if="hasSavings" class="savings">
       Save ${{ savings }}~
     </div>
   </div>
@@ -23,6 +23,12 @@ export default {
     priceCurrency: String,
     savings: Number,
     savingsCurrency: String
+  },
+
+  computed: {
+    hasSavings() {
+      return this.savings > 0
+    }
   }
 }
 </script>
