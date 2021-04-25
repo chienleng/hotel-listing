@@ -1,17 +1,32 @@
 <template>
   <div id="app">
     <AppHeader />
+
+    <ol>
+      <li
+        v-for="(hotel) in hotels"
+        :key="hotel.id"
+      >
+        <HotelItem :hotel="hotel" />
+      </li>
+    </ol>
   </div>
 </template>
 
 <script>
-import {mapActions} from 'vuex'
+import { mapActions, mapState } from 'vuex'
 import AppHeader from './components/app/Header.vue'
+import HotelItem from './components/hotel/Item'
 
 export default {
   name: 'App',
   components: {
-    AppHeader
+    AppHeader,
+    HotelItem
+  },
+
+  computed: {
+    ...mapState(['hotels'])
   },
 
   created() {

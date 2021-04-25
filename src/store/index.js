@@ -9,9 +9,7 @@ const store = new Vuex.Store({
     hotels: []
   },
 
-  getters: {
-    hotels: state => state.hotels
-  },
+  getters: {},
 
   mutations: {
     setHotels(state, hotels) {
