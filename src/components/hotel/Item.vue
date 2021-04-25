@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="hotel">
     <HotelImage
       :promo="imageProps.promo"
       :src="imageProps.src"
@@ -14,6 +14,7 @@
       :cancellation="detailsProps.cancellation"
     />
     <HotelPrice
+      class="hotel-price"
       :price="priceProps.price"
       :priceCurrency="priceProps.priceCurrency"
       :savings="priceProps.savings"
@@ -72,7 +73,12 @@ export default {
 </script>
 
 <style scoped>
-div {
+.hotel {
   display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ddd;
+}
+.hotel-price {
+  width: 300px;
 }
 </style>

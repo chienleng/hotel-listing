@@ -13,7 +13,7 @@
       />
     </div>
 
-    <ol>
+    <ol class="listing">
       <li
         v-for="(hotel) in listing"
         :key="hotel.id"
@@ -65,10 +65,22 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-  margin-top: 2rem;
+  max-width: 1024px;
+  margin: 2rem auto;
 }
 .row {
   display: flex;
   justify-content: space-between;
+  padding: 1rem 0;
+
+}
+.listing {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.listing li {
+  padding: 0;
+  margin: 0;
 }
 </style>
