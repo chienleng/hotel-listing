@@ -1,11 +1,13 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import Hotel from '../models/hotel'
+import { PRICE_HIGH_LOW } from '../enums/order-by'
 
 Vue.use(Vuex)
 
 const store = new Vuex.Store({
   state: {
+    orderBy: PRICE_HIGH_LOW,
     hotels: []
   },
 
@@ -14,6 +16,9 @@ const store = new Vuex.Store({
   mutations: {
     setHotels(state, hotels) {
       state.hotels = hotels
+    },
+    setOrderBy(state, orderBy) {
+      state.orderBy = orderBy
     }
   },
 
