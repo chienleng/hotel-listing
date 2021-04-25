@@ -1,13 +1,14 @@
 import mockData from '../../public/api/data.json'
 import { storeModule } from "../../src/store";
 import { PRICE_HIGH_LOW, PRICE_LOW_HIGH } from '../../src/enums/order-by'
+import dataProcess from '../../src/modules/data/process'
 
 let state
 
 beforeEach(() => {
   state = {
     orderBy: PRICE_HIGH_LOW,
-    hotels: mockData.results
+    hotels: dataProcess(mockData.results)
   }
 })
 
